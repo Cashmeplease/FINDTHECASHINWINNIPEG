@@ -6,61 +6,63 @@
     <title>FIND THE CASH WINNIPEG</title>
     <style>
         body {
-            background-color: #121212;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 50px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             padding: 20px;
-            background: #1e1e1e;
+            background: #f8f8f8;
             display: inline-block;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 255, 100, 0.8);
-            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
         }
         h1 {
-            color: #00ff64;
-            text-shadow: 0 0 10px #00ff64;
+            color: #000000;
+            font-size: 24px;
         }
         #randomNumbers {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
             margin-top: 20px;
-            color: #00ff64;
-        }
-        .container:hover {
-            box-shadow: 0 6px 20px rgba(0, 255, 100, 1);
+            color: #000000;
         }
         button {
-            background: #00ff64;
-            color: black;
+            background: #000000;
+            color: #ffffff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             font-size: 18px;
             cursor: pointer;
             margin-top: 15px;
-            transition: 0.3s;
+            width: 100%;
         }
         button:hover {
-            background: #00cc50;
+            background: #333333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>FIND THE CASH WINNIPEG</h1>
-        <p>Click the button to get two random numbers!</p>
-        <div id="randomNumbers">Click the button</div>
+        <p>Tap the button to get two random numbers!</p>
+        <div id="randomNumbers">Tap the button</div>
         <button onclick="generateNumbers()">Generate Numbers</button>
     </div>
     <script>
         function generateNumbers() {
             let num1 = Math.floor(Math.random() * 10);
             let num2 = Math.floor(Math.random() * 10);
-            document.getElementById("randomNumbers").textContent = `Numbers: ${num1}, ${num2}`;
+            document.getElementById("randomNumbers").textContent = `${num1} ${num2}`;
         }
     </script>
 </body>

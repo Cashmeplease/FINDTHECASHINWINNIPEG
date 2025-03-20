@@ -25,10 +25,6 @@
             width: 90%;
             max-width: 400px;
         }
-        h1 {
-            color: #000000;
-            font-size: 24px;
-        }
         #randomNumbers {
             font-size: 32px;
             font-weight: bold;
@@ -54,15 +50,19 @@
 <body>
     <div class="container">
         <h1>FIND THE CASH WINNIPEG</h1>
-        <p>Tap the button to get two random numbers!</p>
         <div id="randomNumbers">Tap the button</div>
-        <button onclick="generateNumbers()">Generate Numbers</button>
+        <button onclick="generateUniqueNumber()">Generate Number</button>
     </div>
     <script>
-        function generateNumbers() {
-            let num1 = Math.floor(Math.random() * 10);
-            let num2 = Math.floor(Math.random() * 10);
-            document.getElementById("randomNumbers").textContent = `${num1} ${num2}`;
+        let previousNumber = null;
+        
+        function generateUniqueNumber() {
+            let newNumber;
+            do {
+                newNumber = Math.floor(Math.random() * 90) + 10;
+            } while (newNumber === previousNumber);
+            previousNumber = newNumber;
+            document.getElementById("randomNumbers").textContent = `${newNumber}`;
         }
     </script>
 </body>

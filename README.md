@@ -18,10 +18,10 @@
         }
         .container {
             padding: 20px;
-            background: #f8f8f8;
+            background: #ffffff;
             display: inline-block;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 400px;
         }
@@ -43,7 +43,7 @@
             width: 100%;
         }
         button:hover {
-            background: #333333;
+            background: #444444;
         }
     </style>
 </head>
